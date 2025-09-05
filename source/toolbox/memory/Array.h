@@ -57,7 +57,6 @@ private:
     Allocator &operator=(const Allocator &) = delete;
 
     static Allocator &getAllocator() {
-      s_is_available = true;
       static Allocator s_allocator;
       return s_allocator;
     }
@@ -69,8 +68,9 @@ private:
         }
       }
       // 1 of 2: we may run ~Allocator() before every ~Array() is run. To
-      // avoid problems, clear data and set this boolean to false
-      s_block_stacks.clear();
+      // avoid problems, clear data and set the boolean to false
+      s_block_stacks = {};
+      s_is_available = false;
     }
 
     static TYPE *allocate(const std::size_t block_size) {
@@ -114,7 +114,8 @@ private:
 
       // 2 of 2: don't return memory to the Allocator if it has already been
       // destructed
-      if (get_block_id(block_size) < s_block_stacks.size()) {
+      if (s_is_available) {
+        TBOX_ASSERT(get_block_id(block_size) < s_block_stacks.size());
         s_block_stacks[get_block_id(block_size)].push_back(block);
       } else {
         std::free(block);
@@ -122,6 +123,8 @@ private:
     }
 
   private:
+    static bool s_is_available;
+
     static std::vector<std::vector<TYPE *>> s_block_stacks;
   };
 

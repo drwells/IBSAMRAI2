@@ -22,7 +22,7 @@ namespace SAMRAI {
    namespace tbox {
 
 template <class TYPE>
-bool Array<TYPE>::Allocator::s_is_available;
+bool Array<TYPE>::Allocator::s_is_available = false;
 
 template <class TYPE>
 std::vector<std::vector<TYPE *>> Array<TYPE>::Allocator::s_block_stacks;
