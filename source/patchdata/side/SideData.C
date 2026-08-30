@@ -73,29 +73,6 @@ SideData<DIM,TYPE>::~SideData()
 /*
 *************************************************************************
 *									*
-* The following are private and cannot be used, but they are defined	*
-* here for compilers that require that every template declaration have	*
-* a definition (a stupid requirement, if you ask me).			*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-SideData<DIM,TYPE>::SideData(const SideData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void SideData<DIM,TYPE>::operator=(const SideData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Perform a fast copy between two side centered arrays where their	*
 * index spaces overlap.							*
 *									*

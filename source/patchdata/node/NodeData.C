@@ -65,29 +65,6 @@ NodeData<DIM,TYPE>::~NodeData()
 /*
 *************************************************************************
 *									*
-* The following are private and cannot be used, but they are defined	*
-* here for compilers that require that every template declaration have	*
-* a definition (a stupid requirement, if you ask me).			*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-NodeData<DIM,TYPE>::NodeData(const NodeData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void NodeData<DIM,TYPE>::operator=(const NodeData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Perform a fast copy between two node centered arrays where their	*
 * index spaces overlap.							*
 *									*

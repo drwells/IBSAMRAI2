@@ -454,8 +454,8 @@ public:
         tbox::Pointer<tbox::Database> database);
 
 private:
-   OutersideData(const OutersideData<DIM,TYPE>&); // not implemented
-   void operator=(const OutersideData<DIM,TYPE>&);	  // not implemented
+   OutersideData(const OutersideData<DIM,TYPE>&) = delete;
+   void operator=(const OutersideData<DIM,TYPE>&) = delete;
 
    int d_depth;
    ArrayData<DIM,TYPE> d_data[DIM][2];

@@ -507,8 +507,8 @@ public:
         tbox::Pointer<tbox::Database> database); 
 
 private:
-   OuternodeData(const OuternodeData<DIM,TYPE>&); // not implemented
-   void operator=(const OuternodeData<DIM,TYPE>&);	  // not implemented
+   OuternodeData(const OuternodeData<DIM,TYPE>&) = delete;
+   void operator=(const OuternodeData<DIM,TYPE>&) = delete;
 
    //@
    //! @name Internal implementations of data copy operations.

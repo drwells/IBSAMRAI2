@@ -407,8 +407,8 @@ public:
    typedef EdgeIterator<DIM> Iterator;
 
 private:
-   EdgeData(const EdgeData<DIM,TYPE>&);	// not implemented
-   void operator=(const EdgeData<DIM,TYPE>&);		// not implemented
+   EdgeData(const EdgeData<DIM,TYPE>&) = delete;
+   void operator=(const EdgeData<DIM,TYPE>&) = delete;
 
    int d_depth;
    ArrayData<DIM,TYPE> d_data[DIM];

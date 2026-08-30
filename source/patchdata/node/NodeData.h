@@ -342,8 +342,8 @@ public:
    typedef NodeIterator<DIM> Iterator;
 
 private:
-   NodeData(const NodeData<DIM,TYPE>&);	// not implemented
-   void operator=(const NodeData<DIM,TYPE>&);		// not implemented
+   NodeData(const NodeData<DIM,TYPE>&) = delete;
+   void operator=(const NodeData<DIM,TYPE>&) = delete;
 
    int d_depth;
    ArrayData<DIM,TYPE> d_data;

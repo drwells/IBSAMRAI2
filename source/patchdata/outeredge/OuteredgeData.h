@@ -558,8 +558,8 @@ public:
         tbox::Pointer<tbox::Database> database); 
 
 private:
-   OuteredgeData(const OuteredgeData<DIM,TYPE>&); // not implemented
-   void operator=(const OuteredgeData<DIM,TYPE>&);	  // not implemented
+   OuteredgeData(const OuteredgeData<DIM,TYPE>&) = delete;
+   void operator=(const OuteredgeData<DIM,TYPE>&) = delete;
 
    //@{
    //! @name Internal implementations for data copy operations.

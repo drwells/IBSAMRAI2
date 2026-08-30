@@ -350,8 +350,8 @@ private:
     */
    void removeNodeFromList(IndexDataNode<DIM,TYPE,BOX_GEOMETRY> *node);
 
-   IndexData(const IndexData<DIM,TYPE,BOX_GEOMETRY>&); // not implemented
-   void operator=(const IndexData<DIM,TYPE,BOX_GEOMETRY>&);	  // not implemented
+   IndexData(const IndexData<DIM,TYPE,BOX_GEOMETRY>&) = delete;
+   void operator=(const IndexData<DIM,TYPE,BOX_GEOMETRY>&) = delete;
 
    std::vector<IndexDataNode<DIM,TYPE,BOX_GEOMETRY> *> d_data;
 

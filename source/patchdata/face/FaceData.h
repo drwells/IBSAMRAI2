@@ -409,8 +409,8 @@ public:
    typedef FaceIterator<DIM> Iterator;
 
 private:
-   FaceData(const FaceData<DIM,TYPE>&);	// not implemented
-   void operator=(const FaceData<DIM,TYPE>&);		// not implemented
+   FaceData(const FaceData<DIM,TYPE>&) = delete;
+   void operator=(const FaceData<DIM,TYPE>&) = delete;
 
    int d_depth;
    ArrayData<DIM,TYPE> d_data[DIM];
