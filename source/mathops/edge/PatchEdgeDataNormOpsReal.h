@@ -190,10 +190,9 @@ public:
       const tbox::Pointer< pdat::EdgeData<DIM,double> > vol) const;
 
 private:
-   // The following are not implemented:
    PatchEdgeDataNormOpsReal(
-      const PatchEdgeDataNormOpsReal<DIM,TYPE>&);
-   void operator=(const PatchEdgeDataNormOpsReal<DIM,TYPE>&);
+      const PatchEdgeDataNormOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const PatchEdgeDataNormOpsReal<DIM,TYPE>&) = delete;
 
    ArrayDataNormOpsReal<DIM,TYPE> d_array_ops;
 };

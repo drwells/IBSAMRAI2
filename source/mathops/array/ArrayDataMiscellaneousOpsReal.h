@@ -151,10 +151,9 @@ public:
 		      const hier::Box<DIM>& box) const;
 
 private:
-   // The following are not implemented:
    ArrayDataMiscellaneousOpsReal(
-      const ArrayDataMiscellaneousOpsReal<DIM,TYPE>&);
-   void operator=(const ArrayDataMiscellaneousOpsReal<DIM,TYPE>&);
+      const ArrayDataMiscellaneousOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const ArrayDataMiscellaneousOpsReal<DIM,TYPE>&) = delete;
 
 };
 

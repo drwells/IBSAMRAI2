@@ -189,10 +189,9 @@ public:
       const tbox::Pointer< pdat::FaceData<DIM,double> > vol) const;
 
 private:
-   // The following are not implemented:
    PatchFaceDataNormOpsReal(
-      const PatchFaceDataNormOpsReal<DIM,TYPE>&);
-   void operator=(const PatchFaceDataNormOpsReal<DIM,TYPE>&);
+      const PatchFaceDataNormOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const PatchFaceDataNormOpsReal<DIM,TYPE>&) = delete;
 
    ArrayDataNormOpsReal<DIM,TYPE> d_array_ops;
 };

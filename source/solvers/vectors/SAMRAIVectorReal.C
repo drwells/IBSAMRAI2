@@ -154,30 +154,6 @@ SAMRAIVectorReal<DIM,TYPE>::~SAMRAIVectorReal()
 /*
 *************************************************************************
 *                                                                       *
-* The following are private and cannot be used, but they are defined    *
-* here for compilers that require that every template declaration have  *
-* a definition (a stupid requirement, if you ask me).                   *
-*                                                                       *
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-SAMRAIVectorReal<DIM,TYPE>::SAMRAIVectorReal(
-   const SAMRAIVectorReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void SAMRAIVectorReal<DIM,TYPE>::operator=(
-   const SAMRAIVectorReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*                                                                       *
 * Set name string identifier for this vector object.                    *
 *                                                                       *
 *************************************************************************

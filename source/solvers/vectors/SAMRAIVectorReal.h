@@ -579,9 +579,8 @@ public:
   //@}
 
 private:
-   // The following are not implemented
-   SAMRAIVectorReal(const SAMRAIVectorReal<DIM,TYPE>&);
-   void operator=(const SAMRAIVectorReal<DIM,TYPE>&);
+   SAMRAIVectorReal(const SAMRAIVectorReal<DIM,TYPE>&) = delete;
+   void operator=(const SAMRAIVectorReal<DIM,TYPE>&) = delete;
 
    /*
     * Private member function to set number of vector components.  This 

@@ -30,30 +30,6 @@ ArrayDataNormOpsReal<DIM,TYPE>::~ArrayDataNormOpsReal()
 /*
 *************************************************************************
 *									*
-* The const constructor and assignment operator are not actually used	*
-* but are defined here for compilers that require an implementation for	*
-* every declaration.							*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-ArrayDataNormOpsReal<DIM,TYPE>::ArrayDataNormOpsReal(
-   const ArrayDataNormOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);	// not implemented (but needed by some compilers)
-}
-
-template<int DIM, class TYPE>
-void ArrayDataNormOpsReal<DIM,TYPE>::operator=(
-   const ArrayDataNormOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);	// not implemented (but needed by some compilers)
-}
-
-/*
-*************************************************************************
-*									*
 * Generic class template norm operations for real array data.           *
 *									*
 *************************************************************************

@@ -427,10 +427,9 @@ public:
 			  const int denom_id,
 			  bool local_only=false) const;
 private:
-   // The following are not implemented
    HierarchyNodeDataOpsReal(
-      const HierarchyNodeDataOpsReal<DIM,TYPE>&);
-   void operator=(const HierarchyNodeDataOpsReal<DIM,TYPE>&);
+      const HierarchyNodeDataOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const HierarchyNodeDataOpsReal<DIM,TYPE>&) = delete;
 
    tbox::Pointer< hier::PatchHierarchy<DIM> > d_hierarchy;
    int  d_coarsest_level;

@@ -166,10 +166,9 @@ public:
                         const hier::Box<DIM>& box) const;
 
 private:
-   // The following are not implemented:
    PatchFaceDataBasicOps(
-      const PatchFaceDataBasicOps<DIM,TYPE>&);
-   void operator=(const PatchFaceDataBasicOps<DIM,TYPE>&);
+      const PatchFaceDataBasicOps<DIM,TYPE>&) = delete;
+   void operator=(const PatchFaceDataBasicOps<DIM,TYPE>&) = delete;
 
    ArrayDataBasicOps<DIM,TYPE> d_array_ops;
 };

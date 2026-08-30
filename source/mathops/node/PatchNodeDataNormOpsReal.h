@@ -189,10 +189,9 @@ public:
       const tbox::Pointer< pdat::NodeData<DIM,double> > vol) const;
 
 private:
-   // The following are not implemented:
    PatchNodeDataNormOpsReal(
-      const PatchNodeDataNormOpsReal<DIM,TYPE>&);
-   void operator=(const PatchNodeDataNormOpsReal<DIM,TYPE>&);
+      const PatchNodeDataNormOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const PatchNodeDataNormOpsReal<DIM,TYPE>&) = delete;
 
    ArrayDataNormOpsReal<DIM,TYPE> d_array_ops;
 };

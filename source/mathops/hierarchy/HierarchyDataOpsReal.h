@@ -406,9 +406,8 @@ public:
 
 
 private:
-   // The following are not implemented
-   HierarchyDataOpsReal(const HierarchyDataOpsReal<DIM,TYPE>&);
-   void operator=(const HierarchyDataOpsReal<DIM,TYPE>&);
+   HierarchyDataOpsReal(const HierarchyDataOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const HierarchyDataOpsReal<DIM,TYPE>&) = delete;
 
 };
 

@@ -165,9 +165,8 @@ public:
                         const hier::Box<DIM>& box) const;
 
 private:
-   // The following are not implemented:
-   ArrayDataBasicOps(const ArrayDataBasicOps<DIM,TYPE>&);
-   void operator=(const ArrayDataBasicOps<DIM,TYPE>&);
+   ArrayDataBasicOps(const ArrayDataBasicOps<DIM,TYPE>&) = delete;
+   void operator=(const ArrayDataBasicOps<DIM,TYPE>&) = delete;
 
 };
 

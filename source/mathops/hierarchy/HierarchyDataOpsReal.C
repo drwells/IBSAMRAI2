@@ -25,30 +25,6 @@ HierarchyDataOpsReal<DIM,TYPE>::~HierarchyDataOpsReal()
 {
 }
 
-/*
-*************************************************************************
-*                                                                       *
-* The following are private and cannot be used, but they are defined    *
-* here for compilers that require that every template declaration have  *
-* a definition (a stupid requirement, if you ask me).                   *
-*                                                                       *
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-HierarchyDataOpsReal<DIM,TYPE>::HierarchyDataOpsReal(
-   const HierarchyDataOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void HierarchyDataOpsReal<DIM,TYPE>::operator=(
-   const HierarchyDataOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
 }
 }
 #endif

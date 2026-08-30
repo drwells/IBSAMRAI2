@@ -425,10 +425,9 @@ public:
 			  bool local_only=false) const;
 
 private:
-   // The following are not implemented
    HierarchyFaceDataOpsReal(
-      const HierarchyFaceDataOpsReal<DIM,TYPE>&);
-   void operator=(const HierarchyFaceDataOpsReal<DIM,TYPE>&);
+      const HierarchyFaceDataOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const HierarchyFaceDataOpsReal<DIM,TYPE>&) = delete;
 
    tbox::Pointer< hier::PatchHierarchy<DIM> > d_hierarchy;
    int  d_coarsest_level;
