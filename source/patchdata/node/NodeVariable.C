@@ -49,30 +49,6 @@ NodeVariable<DIM,TYPE>::~NodeVariable()
 {
 }
 
-/*
-*************************************************************************
-*									*
-* These are private and should not be used.  They are defined here	*
-* because some template instantiation methods fail if some member	*
-* functions are left undefined.						*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-NodeVariable<DIM,TYPE>::NodeVariable(
-   const NodeVariable<DIM,TYPE>& foo)
-:  hier::Variable<DIM>(NULL, NULL)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void NodeVariable<DIM,TYPE>::operator=(const NodeVariable<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
 }
 }
 #endif

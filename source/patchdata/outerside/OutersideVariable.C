@@ -41,31 +41,6 @@ OutersideVariable<DIM,TYPE>::~OutersideVariable()
 {
 }
 
-/*
-*************************************************************************
-*									*
-* These are private and should not be used.  They are defined here	*
-* because some template instantiation methods fail if some member	*
-* functions are left undefined.						*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-OutersideVariable<DIM,TYPE>::OutersideVariable(
-   const OutersideVariable<DIM,TYPE>& foo)
-:  hier::Variable<DIM>(NULL, NULL)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void OutersideVariable<DIM,TYPE>::operator=(
-   const OutersideVariable<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
 }
 }
 #endif

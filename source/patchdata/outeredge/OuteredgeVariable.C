@@ -41,31 +41,6 @@ OuteredgeVariable<DIM,TYPE>::~OuteredgeVariable()
 {
 }
 
-/*
-*************************************************************************
-*                                                                       *
-* These are private and should not be used.  They are defined here      *
-* because some template instantiation methods fail if some member       *
-* functions are left undefined.                                         *
-*                                                                       *
-*************************************************************************
-*/
-
-template <int DIM, class TYPE>
-OuteredgeVariable<DIM,TYPE>::OuteredgeVariable(
-   const OuteredgeVariable<DIM,TYPE>& foo)
-:  hier::Variable<DIM>(NULL, NULL)
-{
-   NULL_USE(foo);
-}
-
-template <int DIM, class TYPE>
-void OuteredgeVariable<DIM,TYPE>::operator=(
-   const OuteredgeVariable<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
 }
 }
 #endif

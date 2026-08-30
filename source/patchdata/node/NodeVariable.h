@@ -74,8 +74,8 @@ public:
 private:
    bool d_fine_boundary_represents_var;
 
-   NodeVariable(const NodeVariable<DIM,TYPE>&);// not implemented
-   void operator=(const NodeVariable<DIM,TYPE>&);	// not implemented
+   NodeVariable(const NodeVariable<DIM,TYPE>&) = delete;
+   void operator=(const NodeVariable<DIM,TYPE>&) = delete;
 };
 
 }
