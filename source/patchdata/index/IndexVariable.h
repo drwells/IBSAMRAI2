@@ -72,8 +72,8 @@ public:
    bool dataLivesOnPatchBorder() const {return false;}
 
 private:
-   IndexVariable(const IndexVariable<DIM,TYPE,BOX_GEOMETRY>&); // not implemented
-   void operator=(const IndexVariable<DIM,TYPE,BOX_GEOMETRY>&);      // not implemented
+   IndexVariable(const IndexVariable<DIM,TYPE,BOX_GEOMETRY>&) = delete;
+   void operator=(const IndexVariable<DIM,TYPE,BOX_GEOMETRY>&) = delete;
 
 };
 

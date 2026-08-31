@@ -43,32 +43,6 @@ IndexVariable<DIM,TYPE,BOX_GEOMETRY>::~IndexVariable()
 {
 }
 
-/*
-*************************************************************************
-*									*
-* These are private and should not be used.  They are defined here	*
-* because some template instantiation methods fail if some member	*
-* functions are left undefined.						*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE,class BOX_GEOMETRY>
-IndexVariable<DIM,TYPE,BOX_GEOMETRY>::IndexVariable(
-   const IndexVariable<DIM,TYPE,BOX_GEOMETRY>& foo)
-:  hier::Variable<DIM>(NULL, NULL)
-{
-   // not implemented
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE,class BOX_GEOMETRY>
-void IndexVariable<DIM,TYPE,BOX_GEOMETRY>::operator=(const IndexVariable<DIM,TYPE,BOX_GEOMETRY>& foo)
-{
-   // not implemented
-   NULL_USE(foo);
-}
-
 }
 }
 #endif
