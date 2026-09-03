@@ -432,8 +432,8 @@ public:
    typedef SideIterator<DIM> Iterator;
 
 private:
-   SideData(const SideData<DIM,TYPE>&);	// not implemented
-   void operator=(const SideData<DIM,TYPE>&);		// not implemented
+   SideData(const SideData<DIM,TYPE>&) = delete;
+   void operator=(const SideData<DIM,TYPE>&) = delete;
 
    int d_depth;
    hier::IntVector<DIM> d_directions; 

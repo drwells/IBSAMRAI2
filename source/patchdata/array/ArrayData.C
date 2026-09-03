@@ -196,28 +196,6 @@ ArrayData<DIM,TYPE>::~ArrayData()
 /*
 *************************************************************************
 *									*
-* The const constructor and assignment operator are not actually used	*
-* but are defined here for compilers that require an implementation for	*
-* every declaration.							*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-ArrayData<DIM,TYPE>::ArrayData(const ArrayData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void ArrayData<DIM,TYPE>::operator=(const ArrayData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Initialize the array using the specified box, depth, and memory pool.	*
 *									*
 *************************************************************************

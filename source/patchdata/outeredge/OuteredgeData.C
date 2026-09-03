@@ -98,30 +98,6 @@ OuteredgeData<DIM,TYPE>::~OuteredgeData()
 /*
 *************************************************************************
 *                                                                       *
-* The following are private and cannot be used, but they are defined    *
-* here for compilers that require that every template declaration have  *
-* a definition (a stupid requirement, if you ask me).                   *
-*                                                                       *
-*************************************************************************
-*/
-
-template <int DIM, class TYPE>
-OuteredgeData<DIM,TYPE>::OuteredgeData(
-   const OuteredgeData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template <int DIM, class TYPE>
-void OuteredgeData<DIM,TYPE>::operator=(const OuteredgeData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*                                                                       *
 * Perform a fast copy between an outeredge patch data type (source) and *
 * a edge patch data type (destination) where the index spaces overlap.  *
 *                                                                       *

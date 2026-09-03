@@ -58,31 +58,6 @@ IndexData<DIM,TYPE,BOX_GEOMETRY>::~IndexData()
 /*
 *************************************************************************
 *									*
-* The following are private and cannot be used, but they are defined	*
-* here for compilers that require that every template declaration have	*
-* a definition (a stupid requirement, if you ask me).			*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE, class BOX_GEOMETRY>
-IndexData<DIM,TYPE,BOX_GEOMETRY>::IndexData(const IndexData<DIM,TYPE,BOX_GEOMETRY>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-
-   // private and not used (but included for some compilers)
-}
-
-template<int DIM, class TYPE, class BOX_GEOMETRY>
-void IndexData<DIM,TYPE,BOX_GEOMETRY>::operator=(const IndexData<DIM,TYPE,BOX_GEOMETRY>& foo)
-{
-   // private and not used (but included for some compilers)
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Copy into dst where src overlaps on interiors.			*
 *									*
 *************************************************************************

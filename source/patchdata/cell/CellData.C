@@ -87,29 +87,6 @@ CellData<DIM,TYPE>::~CellData()
 /*
 *************************************************************************
 *									*
-* The following are private and cannot be used, but they are defined	*
-* here for compilers that require that every template declaration have	*
-* a definition (a stupid requirement, if you ask me).			*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-CellData<DIM,TYPE>::CellData(const CellData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void CellData<DIM,TYPE>::operator=(const CellData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Perform a fast copy between two cell centered arrays where their	*
 * index spaces overlap.							*
 *									*

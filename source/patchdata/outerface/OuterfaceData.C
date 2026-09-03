@@ -75,30 +75,6 @@ OuterfaceData<DIM,TYPE>::~OuterfaceData()
 /*
 *************************************************************************
 *									*
-* The following are private and cannot be used, but they are defined	*
-* here for compilers that require that every template declaration have	*
-* a definition (a stupid requirement, if you ask me).			*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-OuterfaceData<DIM,TYPE>::OuterfaceData(
-   const OuterfaceData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void OuterfaceData<DIM,TYPE>::operator=(const OuterfaceData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Perform a fast copy between an outerface patch data type (source) and	*
 * a face patch data type (destination) where the index spaces overlap.	*
 *									*

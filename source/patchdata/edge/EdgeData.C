@@ -68,29 +68,6 @@ EdgeData<DIM,TYPE>::~EdgeData()
 /*
 *************************************************************************
 *									*
-* The following are private and cannot be used, but they are defined	*
-* here for compilers that require that every template declaration have	*
-* a definition (a stupid requirement, if you ask me).			*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-EdgeData<DIM,TYPE>::EdgeData(const EdgeData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void EdgeData<DIM,TYPE>::operator=(const EdgeData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * Perform a fast copy between two edge centered arrays where their	*
 * index spaces overlap.							*
 *									*

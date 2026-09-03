@@ -99,30 +99,6 @@ OuternodeData<DIM,TYPE>::~OuternodeData()
 /*
 *************************************************************************
 *                                                                       *
-* The following are private and cannot be used, but they are defined    *
-* here for compilers that require that every template declaration have  *
-* a definition (a stupid requirement, if you ask me).                   *
-*                                                                       *
-*************************************************************************
-*/
-
-template <int DIM, class TYPE>
-OuternodeData<DIM,TYPE>::OuternodeData(
-   const OuternodeData<DIM,TYPE>& foo)
-:  hier::PatchData<DIM>(foo.getBox(), foo.getGhostCellWidth())
-{
-   NULL_USE(foo);
-}
-
-template <int DIM, class TYPE>
-void OuternodeData<DIM,TYPE>::operator=(const OuternodeData<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*                                                                       *
 * Perform a fast copy between an outernode patch data type (source) and *
 * a node patch data type (destination) where the index spaces overlap.  *
 *                                                                       *

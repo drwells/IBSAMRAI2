@@ -522,8 +522,8 @@ public:
    typedef ArrayDataIterator<DIM> Iterator;
 
 private:
-   ArrayData(const ArrayData<DIM,TYPE>&);	// not implemented
-   void operator=(const ArrayData<DIM,TYPE>&);	// not implemented
+   ArrayData(const ArrayData<DIM,TYPE>&) = delete;
+   void operator=(const ArrayData<DIM,TYPE>&) = delete;
 
    /*
     * Private member functions to pack/unpack data to/from buffer.

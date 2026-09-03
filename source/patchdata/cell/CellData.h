@@ -341,8 +341,8 @@ public:
    typedef CellIterator<DIM> Iterator;
 
 private:
-   CellData(const CellData<DIM,TYPE>&);	// not implemented
-   void operator=(const CellData<DIM,TYPE>&);		// not implemented
+   CellData(const CellData<DIM,TYPE>&) = delete;
+   void operator=(const CellData<DIM,TYPE>&) = delete;
 
    int d_depth;
    ArrayData<DIM,TYPE> d_data;
