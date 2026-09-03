@@ -32,30 +32,6 @@ ArrayDataBasicOps<DIM,TYPE>::~ArrayDataBasicOps()
 /*
 *************************************************************************
 *									*
-* The const constructor and assignment operator are not actually used	*
-* but are defined here for compilers that require an implementation for	*
-* every declaration.							*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-ArrayDataBasicOps<DIM,TYPE>::ArrayDataBasicOps(
-   const ArrayDataBasicOps<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);	// not implemented (but needed by some compilers)
-}
-
-template<int DIM, class TYPE>
-void ArrayDataBasicOps<DIM,TYPE>::operator=(
-   const ArrayDataBasicOps<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);	// not implemented (but needed by some compilers)
-}
-
-/*
-*************************************************************************
-*									*
 * General templated operations for array data.                          *
 *									*
 *************************************************************************

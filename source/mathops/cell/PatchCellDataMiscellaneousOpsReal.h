@@ -145,10 +145,9 @@ public:
 
 
 private:
-   // The following are not implemented:
    PatchCellDataMiscellaneousOpsReal(
-      const PatchCellDataMiscellaneousOpsReal<DIM,TYPE>&);
-   void operator=(const PatchCellDataMiscellaneousOpsReal<DIM,TYPE>&);
+      const PatchCellDataMiscellaneousOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const PatchCellDataMiscellaneousOpsReal<DIM,TYPE>&) = delete;
 
    ArrayDataMiscellaneousOpsReal<DIM,TYPE> d_array_ops;
 

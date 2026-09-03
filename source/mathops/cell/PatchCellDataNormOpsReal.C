@@ -30,30 +30,6 @@ PatchCellDataNormOpsReal<DIM,TYPE>::~PatchCellDataNormOpsReal()
 /*
 *************************************************************************
 *                                                                       *
-* The const constructor and assignment operator are not actually used   *
-* but are defined here for compilers that require an implementation for *
-* every declaration.                                                    *
-*                                                                       *
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-PatchCellDataNormOpsReal<DIM,TYPE>::PatchCellDataNormOpsReal(
-   const PatchCellDataNormOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo); 
-}
-
-template<int DIM, class TYPE>
-void PatchCellDataNormOpsReal<DIM,TYPE>::operator=(
-   const PatchCellDataNormOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo); 
-}
-
-/*
-*************************************************************************
-*                                                                       *
 * Compute the number of data entries on a patch in the given box.       *
 *                                                                       *
 *************************************************************************

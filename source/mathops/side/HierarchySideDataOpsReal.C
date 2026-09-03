@@ -127,31 +127,6 @@ HierarchySideDataOpsReal<DIM,TYPE>::getPatchHierarchy() const
 /*
 *************************************************************************
 *                                                                       *
-* The following are private and cannot be used, but they are defined    *
-* here for compilers that require that every template declaration have  *
-* a definition (a stupid requirement, if you ask me).                   *
-*                                                                       *
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-HierarchySideDataOpsReal<DIM,TYPE>::HierarchySideDataOpsReal(
-   const HierarchySideDataOpsReal<DIM,TYPE>& foo)
-:  HierarchyDataOpsReal<DIM,TYPE>()
-{
-   NULL_USE(foo); 
-}
-
-template<int DIM, class TYPE>
-void HierarchySideDataOpsReal<DIM,TYPE>::operator=(
-   const HierarchySideDataOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo); 
-}
-
-/*
-*************************************************************************
-*                                                                       *
 * Basic generic operations.                                             *
 *                                                                       *
 *************************************************************************

@@ -425,10 +425,9 @@ public:
 
 
 private:
-   // The following are not implemented
    HierarchySideDataOpsReal(
-      const HierarchySideDataOpsReal<DIM,TYPE>&);
-   void operator=(const HierarchySideDataOpsReal<DIM,TYPE>&);
+      const HierarchySideDataOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const HierarchySideDataOpsReal<DIM,TYPE>&) = delete;
 
    tbox::Pointer< hier::PatchHierarchy<DIM> > d_hierarchy;
    int  d_coarsest_level;

@@ -30,30 +30,6 @@ PatchEdgeDataOpsReal<DIM,TYPE>::~PatchEdgeDataOpsReal()
 /*
 *************************************************************************
 *                                                                       *
-* The const constructor and assignment operator are not actually used   *
-* but are defined here for compilers that require an implementation for *
-* every declaration.                                                    *
-*                                                                       *
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-PatchEdgeDataOpsReal<DIM,TYPE>::PatchEdgeDataOpsReal(
-   const PatchEdgeDataOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo); 
-}
-
-template<int DIM, class TYPE>
-void PatchEdgeDataOpsReal<DIM,TYPE>::operator=(
-   const PatchEdgeDataOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo); 
-}
-
-/*
-*************************************************************************
-*                                                                       *
 * General templated operations for real edge-centered patch data.       *
 *                                                                       *
 *************************************************************************

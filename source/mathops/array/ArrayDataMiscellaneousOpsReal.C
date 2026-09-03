@@ -31,30 +31,6 @@ ArrayDataMiscellaneousOpsReal<DIM,TYPE>::~ArrayDataMiscellaneousOpsReal()
 /*
 *************************************************************************
 *									*
-* The const constructor and assignment operator are not actually used	*
-* but are defined here for compilers that require an implementation for	*
-* every declaration.							*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-ArrayDataMiscellaneousOpsReal<DIM,TYPE>::ArrayDataMiscellaneousOpsReal(
-   const ArrayDataMiscellaneousOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void ArrayDataMiscellaneousOpsReal<DIM,TYPE>::operator=(
-   const ArrayDataMiscellaneousOpsReal<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
-/*
-*************************************************************************
-*									*
 * General templated miscellaneous operations for array data.            *
 *									*
 *************************************************************************

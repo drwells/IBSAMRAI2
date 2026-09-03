@@ -94,9 +94,8 @@ public:
                     const hier::Box<DIM>& box) const;
 
 private:
-   // The following are not implemented:
-   PatchEdgeDataOpsReal(const PatchEdgeDataOpsReal<DIM,TYPE>&);
-   void operator=(const PatchEdgeDataOpsReal<DIM,TYPE>&);
+   PatchEdgeDataOpsReal(const PatchEdgeDataOpsReal<DIM,TYPE>&) = delete;
+   void operator=(const PatchEdgeDataOpsReal<DIM,TYPE>&) = delete;
 
 };
 
