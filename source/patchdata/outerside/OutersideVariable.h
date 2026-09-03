@@ -75,9 +75,8 @@ public:
    bool dataLivesOnPatchBorder() const {return true;}
 
 private:
-   // neither of the following functions are implemented
-   OutersideVariable(const OutersideVariable<DIM,TYPE>&);
-   void operator=(const OutersideVariable<DIM,TYPE>&);
+   OutersideVariable(const OutersideVariable<DIM,TYPE>&) = delete;
+   void operator=(const OutersideVariable<DIM,TYPE>&) = delete;
 
 };
 

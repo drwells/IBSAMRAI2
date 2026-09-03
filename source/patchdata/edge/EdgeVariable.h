@@ -74,8 +74,8 @@ public:
 private:
    bool d_fine_boundary_represents_var; 
  
-   EdgeVariable(const EdgeVariable<DIM,TYPE>&);// not implemented
-   void operator=(const EdgeVariable<DIM,TYPE>&);	// not implemented
+   EdgeVariable(const EdgeVariable<DIM,TYPE>&) = delete;
+   void operator=(const EdgeVariable<DIM,TYPE>&) = delete;
 
 };
 

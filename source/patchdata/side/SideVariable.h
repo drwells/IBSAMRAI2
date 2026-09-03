@@ -102,8 +102,8 @@ private:
    bool d_fine_boundary_represents_var;
    hier::IntVector<DIM> d_directions;
    
-   SideVariable(const SideVariable<DIM,TYPE>&);  // not implemented
-   void operator=(const SideVariable<DIM,TYPE>&);	// not implemented
+   SideVariable(const SideVariable<DIM,TYPE>&) = delete;
+   void operator=(const SideVariable<DIM,TYPE>&) = delete;
 
 };
 

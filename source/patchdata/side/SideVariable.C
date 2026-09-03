@@ -73,30 +73,6 @@ const hier::IntVector<DIM>& SideVariable<DIM,TYPE>::getDirectionVector() const
    return(d_directions);
 }
 
-/*
-*************************************************************************
-*									*
-* These are private and should not be used.  They are defined here	*
-* because some template instantiation methods fail if some member	*
-* functions are left undefined.						*
-*									*
-*************************************************************************
-*/
-
-template<int DIM, class TYPE>
-SideVariable<DIM,TYPE>::SideVariable(
-   const SideVariable<DIM,TYPE>& foo)
-:  hier::Variable<DIM>(NULL, NULL)
-{
-   NULL_USE(foo);
-}
-
-template<int DIM, class TYPE>
-void SideVariable<DIM,TYPE>::operator=(const SideVariable<DIM,TYPE>& foo)
-{
-   NULL_USE(foo);
-}
-
 }
 }
 #endif

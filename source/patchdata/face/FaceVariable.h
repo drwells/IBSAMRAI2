@@ -81,8 +81,8 @@ public:
 private:
    bool d_fine_boundary_represents_var;
 
-   FaceVariable(const FaceVariable<DIM,TYPE>&); // not implemented
-   void operator=(const FaceVariable<DIM,TYPE>&);	// not implemented
+   FaceVariable(const FaceVariable<DIM,TYPE>&) = delete;
+   void operator=(const FaceVariable<DIM,TYPE>&) = delete;
 };
 
 }

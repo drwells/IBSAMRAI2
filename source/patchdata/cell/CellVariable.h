@@ -69,8 +69,8 @@ public:
    bool dataLivesOnPatchBorder() const {return false;}
 
 private:
-   CellVariable(const CellVariable<DIM,TYPE>&);// not implemented
-   void operator=(const CellVariable<DIM,TYPE>&);	// not implemented
+   CellVariable(const CellVariable<DIM,TYPE>&) = delete;
+   void operator=(const CellVariable<DIM,TYPE>&) = delete;
 };
 
 

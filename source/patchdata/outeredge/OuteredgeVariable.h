@@ -66,9 +66,8 @@ public:
    bool dataLivesOnPatchBorder() const {return true;}
 
 private:
-   // neither of the following functions are implemented
-   OuteredgeVariable(const OuteredgeVariable<DIM,TYPE>&);
-   void operator=(const OuteredgeVariable<DIM,TYPE>&);
+   OuteredgeVariable(const OuteredgeVariable<DIM,TYPE>&) = delete;
+   void operator=(const OuteredgeVariable<DIM,TYPE>&) = delete;
 
 };
 

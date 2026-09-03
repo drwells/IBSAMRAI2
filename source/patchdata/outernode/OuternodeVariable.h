@@ -70,9 +70,8 @@ public:
    bool dataLivesOnPatchBorder() const {return true;}
 
 private:
-   // neither of the following functions are implemented
-   OuternodeVariable(const OuternodeVariable<DIM,TYPE>&);
-   void operator=(const OuternodeVariable<DIM,TYPE>&);
+   OuternodeVariable(const OuternodeVariable<DIM,TYPE>&) = delete;
+   void operator=(const OuternodeVariable<DIM,TYPE>&) = delete;
 
 };
 
